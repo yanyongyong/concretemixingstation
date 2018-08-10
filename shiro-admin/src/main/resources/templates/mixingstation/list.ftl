@@ -6,7 +6,7 @@
             <li><a href="/">首页</a></li>
             <li class="active">用户管理</li>
         </ol>
-        <div class="x_panel">
+        <div class="x_panel  ">
             <div class="x_content">
                 <div class="<#--table-responsive-->">
                     <div class="btn-group hidden-xs" id="toolbar">
