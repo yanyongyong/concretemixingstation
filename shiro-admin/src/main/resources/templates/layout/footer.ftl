@@ -24,6 +24,10 @@
 <script src="https://cdn.bootcss.com/zTree.v3/3.5.29/js/jquery.ztree.core.min.js"></script>
 <script src="https://cdn.bootcss.com/zTree.v3/3.5.29/js/jquery.ztree.excheck.min.js"></script>
 
+<!-- 引入组件库 -->
+<script src="//unpkg.com/vue/dist/vue.js"></script>
+<script src="//unpkg.com/element-ui@2.4.6/lib/index.js"></script>
+
 <script src="/assets/js/validator.js"></script>
 <script src="/assets/js/jquery-form.js"></script>
 <script src="/assets/js/wangEditor.min.js" type="text/javascript"></script>

@@ -1,9 +1,11 @@
 package com.zyd.shiro.business.mixingstation.controller;
 
 import com.github.pagehelper.PageInfo;
+import com.zyd.shiro.business.mixingstation.entity.ProductionDetail;
 import com.zyd.shiro.business.mixingstation.entity.ProductionRecords;
 import com.zyd.shiro.business.mixingstation.server.MixingStationServer;
 import com.zyd.shiro.business.mixingstation.vo.MixingStationConditionVO;
+import com.zyd.shiro.business.mixingstation.vo.MixingStationDetailConditionVO;
 import com.zyd.shiro.framework.object.PageResult;
 import com.zyd.shiro.util.ResultUtil;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
@@ -27,6 +29,17 @@ public class MixingStationController {
     @RequestMapping(value = "/list")
     public PageResult list(MixingStationConditionVO vo){
         PageInfo<ProductionRecords> pageInfo = mixingStationServer.findPageBreakByCondition(vo);
+        return ResultUtil.tablePage(pageInfo);
+    }
+
+    @RequiresPermissions("mixingstations")
+    @RequestMapping(value = "/detailList")
+    public PageResult list(MixingStationDetailConditionVO vo){
+        ProductionDetail p = new ProductionDetail();
+//        p.setMixProductionRecordsId(1);
+//        vo.setProductionDetail(p);
+//        System.out.println(vo.getProductionDetail().getMixProductionRecordsId());
+        PageInfo<ProductionDetail> pageInfo = mixingStationServer.findPageProductionDetail(vo);
         return ResultUtil.tablePage(pageInfo);
     }
 
