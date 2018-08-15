@@ -1,7 +1,11 @@
 package com.zyd.shiro.business.project.entity;
 
 import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+
+import javax.persistence.Transient;
+import java.util.List;
 
 /**
  * @Author: ziv
@@ -17,8 +21,12 @@ public class Project {
 
     private String name;
 
+    @ApiModelProperty("父类ID")
     private Integer parentId;
 
+    @Transient
     private Integer checked;
+    @Transient
+    private List<Project> nodes;
 
 }

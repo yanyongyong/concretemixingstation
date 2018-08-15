@@ -78,4 +78,10 @@ public class RenderController {
         return ResultUtil.view("mixingstation/list");
     }
 
+
+    @RequiresPermissions("project")
+    @GetMapping("/project")
+    public ModelAndView project() {
+        return ResultUtil.view("project/list");
+    }
 }

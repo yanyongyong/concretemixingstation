@@ -14,7 +14,7 @@ public class Online {
 
     private String project;
 
-    private String Section;
+    private String tenders;
 
     private String serverIP;
 

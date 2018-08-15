@@ -35,7 +35,7 @@ import springfox.documentation.spring.web.plugins.Docket;
  * 程序启动类
  */
 @SpringBootApplication
-@MapperScan({"com.zyd.shiro.business.online.repository","com.zyd.shiro.business.mixingstation.repository"})
+@MapperScan({"com.zyd.shiro.business.online.repository","com.zyd.shiro.business.mixingstation.repository","com.zyd.shiro.business.project.repository"})
 public class ShiroAdminApplication{
 
     public static void main(String[] args) {

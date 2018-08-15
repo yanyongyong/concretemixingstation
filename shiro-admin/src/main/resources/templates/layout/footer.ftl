@@ -21,8 +21,8 @@
 <script src="https://cdn.bootcss.com/bootstrap-daterangepicker/2.1.24/daterangepicker.min.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap-progressbar/0.9.0/bootstrap-progressbar.min.js"></script>
-<script src="https://cdn.bootcss.com/zTree.v3/3.5.29/js/jquery.ztree.core.min.js"></script>
-<script src="https://cdn.bootcss.com/zTree.v3/3.5.29/js/jquery.ztree.excheck.min.js"></script>
+<#--<script src="https://cdn.bootcss.com/zTree.v3/3.5.29/js/jquery.ztree.core.min.js"></script>-->
+<#--<script src="https://cdn.bootcss.com/zTree.v3/3.5.29/js/jquery.ztree.excheck.min.js"></script>-->
 
 <!-- 引入组件库 -->
 <script src="//unpkg.com/vue/dist/vue.js"></script>
@@ -35,5 +35,6 @@
 <script src="/assets/js/zhyd.core.js"></script>
 <script src="/assets/js/zyd.table.js"></script>
 <script src="/assets/js/me.table.js"></script>
+<script src="/assets/js/jquery.ztree.all.js"></script>
 </body>
 </html>
