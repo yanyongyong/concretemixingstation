@@ -43,8 +43,16 @@ public class ProjectServer {
         return mapList;
     }
 
-    public Project add(Project project){
-        return projectRepository.add(project.getName(),project.getParentId());
+    public void add(Project project){
+         projectRepository.add(project.getName(),project.getParentId());
+    }
+
+    public void delete(Integer id){
+        projectRepository.delete(id);
+    }
+
+    public void edit(Project project){
+        projectRepository.edit(project.getName(),project.getId());
     }
 
 }

@@ -4,6 +4,7 @@ import com.zyd.shiro.business.project.entity.Project;
 import com.zyd.shiro.business.project.service.ProjectServer;
 import com.zyd.shiro.framework.object.ResponseVO;
 import com.zyd.shiro.util.ResultUtil;
+import io.swagger.models.auth.In;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -33,6 +34,28 @@ public class ProjectController {
     public ResponseVO add(Project project){
         try {
             projectServer.add(project);
+        }catch (Exception e){
+            e.printStackTrace();
+            return ResultUtil.error("error");
+        }
+        return ResultUtil.success("成功");
+    }
+
+    @GetMapping("/delete")
+    public ResponseVO delete(Integer id){
+        try {
+            projectServer.delete(id);
+        }catch (Exception e){
+            e.printStackTrace();
+            return ResultUtil.error("error");
+        }
+        return ResultUtil.success("成功");
+    }
+
+    @GetMapping("/edit")
+    public ResponseVO edit(Project project){
+        try {
+            projectServer.edit(project);
         }catch (Exception e){
             e.printStackTrace();
             return ResultUtil.error("error");

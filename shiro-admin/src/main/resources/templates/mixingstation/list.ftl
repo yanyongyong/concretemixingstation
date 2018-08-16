@@ -164,7 +164,7 @@
         //表格加载成功后触发
         $('#tablelist').on('load-success.bs.table', function (data) {
             var allTableData = $('#tablelist').bootstrapTable('getData');
-            detailTabel(allTableData[0].id);
+            // detailTabel(allTableData[0].id);
         });
     });
 

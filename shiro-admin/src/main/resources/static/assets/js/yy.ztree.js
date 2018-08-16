@@ -18,7 +18,7 @@ function addHoverDom(treeId, treeNode) {
         // zTree.selectNode(node); //让新添加的节点处于选中状态
         var data = {"parentId":treeNode.id,"name":treeNode.name+"—分支"};
         yyAjax("/project/add",data,"添加成功","添加失败");
-        alert("diy Button for " + treeNode.name);
+        // alert("diy Button for " + treeNode.name);
     });
 };
 
@@ -51,16 +51,17 @@ function beforeRemove(treeId, treeNode) {
  * @param treeNode
  */
 function zTreeOnRemove(event, treeId, treeNode) {
-    $.post('deleteNode.action', {
-        'classification.id': treeNode.id,
-    }, function(data, textStatus, xhr) {
-        // optional stuff to do after success
-        if (textStatus == "success") {
-            toastr.success("删除成功");
-        } else {
-            toastr.error("删除失败");
-        }
-    });
+    var data = {"id":treeNode.id};
+    yyAjax("/project/delete",data,"删除成功","删除失败");
+    // $.post('deleteNode.action', {
+    //     'classification.id': treeNode.id,
+    // }, function(data, textStatus, xhr) {
+    //     if (textStatus == "success") {
+    //         toastr.success("删除成功");
+    //     } else {
+    //         toastr.error("删除失败");
+    //     }
+    // });
 }
 
 /**
@@ -70,20 +71,9 @@ function zTreeOnRemove(event, treeId, treeNode) {
  * @param treeNode
  * @param isCancel
  */
-function zTreeOnRename(event, treeId, treeNode, isCancel) {
-    console.log(treeId);
-    // $.post('updateNode.action', {
-    //     'classification.id': $.trim(treeNode.id),
-    //     'classification.perId': $.trim(treeNode.pId),
-    //     'classification.classification': treeNode.name
-    // }, function(data, textStatus, xhr) {
-    //     /*optional stuff to do after success */
-    //     if (textStatus == "success") {
-    //         toastr.success("修改成功");
-    //     } else {
-    //         toastr.error("修改失败");
-    //     }
-    // });
+function zTreeOnRename(event, treeId, treeNode) {
+    var data = {"id":treeNode.id,"name":treeNode.name};
+    yyAjax("/project/edit",data,"修改成功","修改失败");
 }
 
 function yyAjax(url,data,successMessage,errorMessage) {
@@ -94,11 +84,10 @@ function yyAjax(url,data,successMessage,errorMessage) {
         data:data,    //参数值
         type:"GET",   //请求方式
         success:function(data){
-            if (data == "成功")toastr.success(successMessage);
-            toastr.success(errorMessage);
+            toastr.success(successMessage);
         },
         error:function(){
-            toastr.success(errorMessage);
+            toastr.warning(errorMessage);
         }
     });
 }
