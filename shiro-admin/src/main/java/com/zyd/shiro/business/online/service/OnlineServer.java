@@ -1,4 +1,4 @@
-package com.zyd.shiro.business.online.server;
+package com.zyd.shiro.business.online.service;
 
 import com.zyd.shiro.business.online.entity.Online;
 import com.zyd.shiro.business.online.repository.OnlineRepository;

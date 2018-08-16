@@ -1,8 +1,7 @@
-package com.zyd.shiro.business.project.server;
+package com.zyd.shiro.business.project.service;
 
 import com.zyd.shiro.business.project.entity.Project;
 import com.zyd.shiro.business.project.repository.ProjectRepository;
-import com.zyd.shiro.persistence.beans.SysResources;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;

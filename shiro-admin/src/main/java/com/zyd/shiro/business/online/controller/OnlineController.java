@@ -2,7 +2,7 @@ package com.zyd.shiro.business.online.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import com.zyd.shiro.business.online.entity.Online;
-import com.zyd.shiro.business.online.server.OnlineServer;
+import com.zyd.shiro.business.online.service.OnlineServer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

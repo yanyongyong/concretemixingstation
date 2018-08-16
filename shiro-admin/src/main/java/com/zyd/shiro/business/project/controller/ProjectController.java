@@ -1,12 +1,11 @@
 package com.zyd.shiro.business.project.controller;
 
 import com.zyd.shiro.business.project.entity.Project;
-import com.zyd.shiro.business.project.server.ProjectServer;
+import com.zyd.shiro.business.project.service.ProjectServer;
 import com.zyd.shiro.framework.object.ResponseVO;
 import com.zyd.shiro.util.ResultUtil;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

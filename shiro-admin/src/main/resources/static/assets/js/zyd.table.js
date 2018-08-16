@@ -49,7 +49,7 @@
                     queryParams: $.tableUtil.queryParams,//传递参数（*）
                     queryParamsType: '',
                     pagination: true,                   //是否显示分页（*）
-                    sidePagination: "server",           //分页方式：client客户端分页，server服务端分页（*）
+                    sidePagination: "service",           //分页方式：client客户端分页，server服务端分页（*）
                     pageNumber: 1,                       //初始化加载第一页，默认第一页
                     pageSize: 10,                       //每页的记录行数（*）
                     pageList: [10, 20, 30, 50, 100],        //可供选择的每页的行数（*）

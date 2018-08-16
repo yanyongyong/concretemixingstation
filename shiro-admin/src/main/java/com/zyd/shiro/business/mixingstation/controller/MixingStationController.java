@@ -3,7 +3,7 @@ package com.zyd.shiro.business.mixingstation.controller;
 import com.github.pagehelper.PageInfo;
 import com.zyd.shiro.business.mixingstation.entity.ProductionDetail;
 import com.zyd.shiro.business.mixingstation.entity.ProductionRecords;
-import com.zyd.shiro.business.mixingstation.server.MixingStationServer;
+import com.zyd.shiro.business.mixingstation.service.MixingStationServer;
 import com.zyd.shiro.business.mixingstation.vo.MixingStationConditionVO;
 import com.zyd.shiro.business.mixingstation.vo.MixingStationDetailConditionVO;
 import com.zyd.shiro.framework.object.PageResult;
