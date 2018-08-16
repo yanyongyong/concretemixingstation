@@ -23,6 +23,9 @@ public class ProjectServer {
     @Autowired
     ProjectRepository projectRepository;
 
+    /**
+     *封装ztree需要的数据
+     */
     public List<Map<String, Object>> findAll(){
         List<Project> projects = projectRepository.findAll();
         if (CollectionUtils.isEmpty(projects)) {
@@ -40,4 +43,9 @@ public class ProjectServer {
         }
         return mapList;
     }
+
+    public Project add(Project project){
+        return projectRepository.add(project.getName(),project.getParentId());
+    }
+
 }
